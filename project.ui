@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../Desktop/รูปfrom internet/15e1448aff067989819887028ebbd2af.jpg</normaloff>../../../../Desktop/รูปfrom internet/15e1448aff067989819887028ebbd2af.jpg</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
@@ -32,35 +36,93 @@
      <locale language="English" country="UnitedStates"/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QListView" name="listView">
+     <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>140</y>
-        <width>821</width>
-        <height>481</height>
+        <x>20</x>
+        <y>90</y>
+        <width>951</width>
+        <height>521</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 255);
+background-color: rgb(0, 0, 149);
+color: rgb(255, 255, 127);
+font: 26pt &quot;Algerian&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Type</string>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>911</width>
+         <height>451</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3"/>
+      </widget>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_2">
+     <widget class="QWidget" name="formLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>60</y>
-        <width>256</width>
+        <x>620</x>
+        <y>30</y>
+        <width>331</width>
         <height>51</height>
        </rect>
       </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Name :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="formLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>279</width>
+        <height>87</height>
+       </rect>
       </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBox_2">
+         <item>
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Remove</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Function :</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_3">
@@ -91,8 +153,147 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;Song&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>70</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="maxVisibleItems">
+       <number>12</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>70</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Name:</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="page_2"/>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLCDNumber" name="lcdNumber">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>260</y>
+        <width>301</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="click">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>210</y>
+        <width>421</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sitka Display</family>
+        <pointsize>28</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+border-left-color: rgb(0, 170, 255);
+font: italic 28pt &quot;Sitka Display&quot;;
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Click to count BPM</string>
+      </property>
+      <property name="autoRepeatDelay">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="commandLinkButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>241</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-20</y>
+        <width>1011</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Desktop/รูปfrom internet/Template Metronome.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>540</y>
+        <width>221</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label</zorder>
+     <zorder>lcdNumber</zorder>
+     <zorder>click</zorder>
+     <zorder>commandLinkButton</zorder>
+     <zorder>radioButton</zorder>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -108,5 +309,22 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>click</sender>
+   <signal>clicked()</signal>
+   <receiver>radioButton</receiver>
+   <slot>toggle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>605</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

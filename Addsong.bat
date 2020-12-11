@@ -1,0 +1,1 @@
+pyuic5 Addsong.ui -o Addsong.py

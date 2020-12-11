@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>974</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Addsong</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/image/รูปfrom internet/ecb60dab3d73704e847e989b04f5521b.jpg);
+background-image: url(:/image/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="Source">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>80</y>
+      <width>831</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 127);
+font: 14pt &quot;Wide Latin&quot;;
+fo
+font: 81 24pt &quot;Rockwell Extra Bold&quot;;</string>
+    </property>
+    <property name="title">
+     <string>Songs</string>
+    </property>
+    <widget class="QPlainTextEdit" name="Output">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>811</width>
+       <height>451</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>30</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Name:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="Inputsong">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Rockwell Condensed&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QComboBox" name="Function">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;
+background-color: rgb(85, 85, 127);
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Remove</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="click">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>30</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Enter</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>974</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="Myimage.qrc"/>
+ </resources>
+ <connections/>
+</ui>

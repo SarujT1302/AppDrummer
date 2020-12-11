@@ -1,0 +1,1 @@
+pyuic5 Metronome.ui -o Metronome.py
