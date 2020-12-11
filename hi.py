@@ -1,18 +1,23 @@
-Song_name=input("Enter song name:")
-Song_type=input("Enter type:")
-p=[]
-r=[]
-h=[]
-b=[]
-j=[]
+import time
 
-def Pop(s):
-    p.append(s)
-def rock(s):
-    r.append(s)
-def hiphop(s):
-    h.append(S)
-def jazz(s):
-    j.append(s)
-def rb(s):
-    b.append(s)
+list1=[]
+
+def click():
+    if len(list1)<2:
+        p=time.time()
+        list1.append(p)
+        BPM=str("please click to count")
+        
+            
+    if len(list1)==2:
+        p=time.time()
+        list1.append(p)
+        period=list1[1]-list1[0]
+        BPM= int(60//period)
+        list1.clear()
+
+    return list1 , BPM
+
+
+print(list1)
+
