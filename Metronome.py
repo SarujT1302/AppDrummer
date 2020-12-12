@@ -46,6 +46,12 @@ class Ui_MainWindow(object):
 "font: 75 16pt \"Rockwell\";\n"
 "background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);")
         self.pushButton.setObjectName("pushButton")
+        self.Back = QtWidgets.QPushButton(self.centralwidget)
+        self.Back.setGeometry(QtCore.QRect(30, 500, 121, 41))
+        self.Back.setStyleSheet("background-color: rgb(170, 0, 0);\n"
+"color: rgb(255, 255, 127);\n"
+"font: 16pt \"Rockwell\";")
+        self.Back.setObjectName("Back")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(20, 90, 761, 291))
         self.label_2.setStyleSheet("background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);")
@@ -68,6 +74,9 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.click)
 
         self.retranslateUi(MainWindow)
+        self.Back.clicked.connect(MainWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
         self.pushButton.clicked.connect(self.radioButton.animateClick)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -79,6 +88,7 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Click To Count !"))
         self.label_2.setText(_translate("MainWindow", "TextLabel"))
         self.radioButton.setText(_translate("MainWindow", "RadioButton"))
+        self.Back.setText(_translate("MainWindow", "Back"))
     def click(self):
             result=0
             if len(list1)<2:
