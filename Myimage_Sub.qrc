@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>รูปfrom internet/ma. 2.jpg</file>
+    <file>รูปfrom internet/98892-200.png</file>
+    <file>รูปfrom internet/ma.1.jpg</file>
+    <file>รูปfrom internet/ma.jpg</file>
+    <file>รูปfrom internet/ma.png</file>
+    <file>รูปfrom internet/ma.png</file>
+    <file>รูปfrom internet/download.png</file>
+    <file>รูปfrom internet/png-clipart-black-and-white-pattern-of-quarter-note-angle-white.png</file>
+  </qresource>
+</RCC>

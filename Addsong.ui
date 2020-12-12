@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>974</width>
-    <height>664</height>
+    <width>928</width>
+    <height>695</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,7 +36,7 @@ font: 81 24pt &quot;Rockwell Extra Bold&quot;;</string>
     <property name="title">
      <string>Songs</string>
     </property>
-    <widget class="QPlainTextEdit" name="Output">
+    <widget class="QPlainTextEdit" name="plainTextEdit">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -69,7 +69,7 @@ font: 81 24pt &quot;Rockwell Extra Bold&quot;;</string>
 background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
-        <string>Name:</string>
+        <string>Add Name:</string>
        </property>
       </widget>
      </item>
@@ -82,33 +82,6 @@ font: 16pt &quot;Rockwell Condensed&quot;;</string>
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QComboBox" name="Function">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>30</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 127);
-font: 16pt &quot;Rockwell&quot;;
-background-color: rgb(85, 85, 127);
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 127);</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Add</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Remove</string>
-     </property>
-    </item>
    </widget>
    <widget class="QPushButton" name="click">
     <property name="geometry">
@@ -128,13 +101,49 @@ font: 16pt &quot;Rockwell&quot;;</string>
      <string>Enter</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="Clear">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>590</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Back">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>590</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>974</width>
+     <width>928</width>
      <height>26</height>
     </rect>
    </property>
@@ -144,5 +153,22 @@ font: 16pt &quot;Rockwell&quot;;</string>
  <resources>
   <include location="Myimage.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Back</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>422</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

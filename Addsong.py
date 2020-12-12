@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(974, 664)
+        MainWindow.resize(928, 695)
         MainWindow.setStyleSheet("background-image: url(:/image/รูปfrom internet/ecb60dab3d73704e847e989b04f5521b.jpg);\n"
 "background-image: url(:/image/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -48,48 +48,53 @@ class Ui_MainWindow(object):
 "font: 16pt \"Rockwell Condensed\";")
         self.Inputsong.setObjectName("Inputsong")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.Inputsong)
-        self.Function = QtWidgets.QComboBox(self.centralwidget)
-        self.Function.setGeometry(QtCore.QRect(300, 30, 141, 41))
-        self.Function.setStyleSheet("background-color: rgb(255, 255, 127);\n"
-"font: 16pt \"Rockwell\";\n"
-"background-color: rgb(85, 85, 127);\n"
-"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 127);")
-        self.Function.setObjectName("Function")
-        self.Function.addItem("")
-        self.Function.addItem("")
         self.click = QtWidgets.QPushButton(self.centralwidget)
         self.click.setGeometry(QtCore.QRect(790, 30, 111, 41))
         self.click.setStyleSheet("background-color: rgb(170, 0, 0);\n"
 "color: rgb(255, 255, 127);\n"
 "font: 16pt \"Rockwell\";")
         self.click.setObjectName("click")
+        self.Clear = QtWidgets.QPushButton(self.centralwidget)
+        self.Clear.setGeometry(QtCore.QRect(760, 590, 141, 41))
+        self.Clear.setStyleSheet("background-color: rgb(170, 0, 0);\n"
+"color: rgb(255, 255, 127);\n"
+"font: 16pt \"Rockwell\";")
+        self.Clear.setObjectName("Clear")
+        self.Back = QtWidgets.QPushButton(self.centralwidget)
+        self.Back.setGeometry(QtCore.QRect(70, 590, 141, 41))
+        self.Back.setStyleSheet("background-color: rgb(170, 0, 0);\n"
+"color: rgb(255, 255, 127);\n"
+"font: 16pt \"Rockwell\";")
+        self.Back.setObjectName("Back")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 974, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 928, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.click.clicked.connect(self.Add)
+        self.Clear.clicked.connect(self.clear)
 
         self.retranslateUi(MainWindow)
+        self.Back.clicked.connect(MainWindow.close)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Addsong"))
         self.Source.setTitle(_translate("MainWindow", "Songs"))
-        self.label.setText(_translate("MainWindow", "Name:"))
-        self.Function.setItemText(0, _translate("MainWindow", "Add"))
-        self.Function.setItemText(1, _translate("MainWindow", "Remove"))
+        self.label.setText(_translate("MainWindow", "Add Name:"))
         self.click.setText(_translate("MainWindow", "Enter"))
+        self.Clear.setText(_translate("MainWindow", "Clear"))
+        self.Back.setText(_translate("MainWindow", "Back"))
     def Add(self):
             lists=self.Inputsong.text()
             self.Output.appendPlainText(lists)
             self.Inputsong.setText("")
-
+    def clear(self):
+            self.Output.clear()
 import Myimage_rc
 
 if __name__ == "__main__":

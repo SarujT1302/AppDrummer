@@ -96,15 +96,13 @@ class Ui_MainWindow(object):
             if len(a)>=2 :
                     for i in a:
                             result +=i
-                    BPM=result//len(a)
+                    BPM=result//len(a)  
             print(list1)
             print(BPM)
             print(result)
             self.label.setText(str(BPM))
             
 import Myimage_metronome_rc
-
-
 
 if __name__ == "__main__":
         import sys
