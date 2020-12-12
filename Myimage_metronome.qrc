@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>รูปfrom internet/3025528.jpg</file>
+  </qresource>
+</RCC>

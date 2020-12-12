@@ -9,21 +9,36 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import time
 
-
+list1=[]
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
+        MainWindow.setStyleSheet("background:url(:/newPrefix/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg)")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.lcdNumber = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdNumber.setGeometry(QtCore.QRect(470, 200, 301, 111))
+        self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(50, 80, 701, 271))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.lcdNumber = QtWidgets.QLCDNumber(self.horizontalLayoutWidget)
         self.lcdNumber.setStyleSheet("color: rgb(255, 0, 0);\n"
+"background-color: rgb(85, 170, 255);\n"
+"alternate-background-color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 255, 255);")
         self.lcdNumber.setObjectName("lcdNumber")
+        self.horizontalLayout.addWidget(self.lcdNumber)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(20, 170, 401, 171))
+        self.pushButton.setGeometry(QtCore.QRect(200, 400, 391, 81))
+        self.pushButton.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: rgb(199, 0, 0);\n"
+"font: 75 16pt \"Rockwell\";\n"
+"background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);")
         self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -33,11 +48,44 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        
 
         self.retranslateUi(MainWindow)
+        self.pushButton.clicked.connect(self.lcdNumber.setBinMode)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "Click to count BPM"))
+        self.pushButton.setText(_translate("MainWindow", "Click To Count !"))
+        self.pushButton.clicked.connect(self.click)
+
+    def click(self):       
+        if len(list1)<2:
+          p=time.time()
+          list1.append(p)
+          BPM=40
+        if len(list1)==2:
+               p=time.time()
+               list1.append(p)
+               period=list1[1]-list1[0]
+               BPM= int(60//period)
+               list1.clear()
+        self.lcdNumber.display(BPM)
+        print(list1)
+        print(BPM)
+        
+        
+                   
+
+           
+import Myimage_metronome_rc
+
+if __name__ == "__main__":
+        import sys
+        app = QtWidgets.QApplication(sys.argv)
+        MainWindow=QtWidgets.QMainWindow()
+        ui = Ui_MainWindow()
+        ui.setupUi(MainWindow)
+        MainWindow.show()
+        sys.exit(app.exec_())

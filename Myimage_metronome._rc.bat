@@ -1,0 +1,1 @@
+pyrcc5 Myimage_metronome.qrc -o Myimage_metronome_rc.py
