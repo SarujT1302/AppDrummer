@@ -56,6 +56,12 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QtCore.QRect(20, 90, 761, 291))
         self.label_2.setStyleSheet("background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);")
         self.label_2.setObjectName("label_2")
+        self.Clear = QtWidgets.QPushButton(self.centralwidget)
+        self.Clear.setGeometry(QtCore.QRect(640, 500, 141, 41))
+        self.Clear.setStyleSheet("background-color: rgb(170, 0, 0);\n"
+"color: rgb(255, 255, 127);\n"
+"font: 16pt \"Rockwell\";")
+        self.Clear.setObjectName("Clear")
         self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton.setGeometry(QtCore.QRect(390, 510, 20, 21))
         self.radioButton.setObjectName("radioButton")
@@ -78,6 +84,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.pushButton.clicked.connect(self.radioButton.animateClick)
+        self.Clear.clicked.connect(self.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -88,6 +95,7 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Click To Count !"))
         self.label_2.setText(_translate("MainWindow", "TextLabel"))
         self.radioButton.setText(_translate("MainWindow", "RadioButton"))
+        self.Clear.setText(_translate("MainWindow", "Clear"))
         self.Back.setText(_translate("MainWindow", "Back"))
     def click(self):
             result=0
@@ -109,8 +117,14 @@ class Ui_MainWindow(object):
                     BPM=result//len(a)  
             print(list1)
             print(BPM)
+            print(a)
             print(result)
             self.label.setText(str(BPM))
+    def clear(self):
+                a.clear()
+                result=0
+                BPM=""
+                self.label.setText(str(BPM))
             
 import Myimage_metronome_rc
 
