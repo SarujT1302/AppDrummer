@@ -161,8 +161,8 @@ font: 16pt &quot;Rockwell&quot;;</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>292</x>
-     <y>76</y>
+     <x>210</x>
+     <y>616</y>
     </hint>
     <hint type="destinationlabel">
      <x>422</x>

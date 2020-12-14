@@ -1,0 +1,1 @@
+pyrcc5 Myimage_main.qrc -o Myimage_main.py

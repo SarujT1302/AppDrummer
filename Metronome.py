@@ -10,6 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import time
+
 list1=[]
 a=[]
 result=0
@@ -125,7 +126,7 @@ class Ui_MainWindow(object):
                 result=0
                 BPM=""
                 self.label.setText(str(BPM))
-            
+
 import Myimage_metronome_rc
 
 if __name__ == "__main__":

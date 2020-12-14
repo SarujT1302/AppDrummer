@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>700</height>
+    <width>930</width>
+    <height>680</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>930</width>
+    <height>680</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -23,8 +29,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1000</width>
-      <height>700</height>
+      <width>931</width>
+      <height>631</height>
      </rect>
     </property>
     <property name="font">
@@ -32,241 +38,483 @@
       <pointsize>18</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background:
+url(:/newPrefix/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg)</string>
+    </property>
     <property name="locale">
      <locale language="English" country="UnitedStates"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QPushButton" name="Enter">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>90</y>
-        <width>951</width>
-        <height>521</height>
+        <x>800</x>
+        <y>40</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 255);
-background-color: rgb(0, 0, 149);
+       <string notr="true">background-color: rgb(170, 0, 0);
 color: rgb(255, 255, 127);
-font: 26pt &quot;Algerian&quot;;</string>
-      </property>
-      <property name="title">
-       <string>Type</string>
-      </property>
-      <widget class="QWidget" name="gridLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>50</y>
-         <width>911</width>
-         <height>451</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3"/>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>620</x>
-        <y>30</y>
-        <width>331</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Name :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_2"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>30</y>
-        <width>279</width>
-        <height>87</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="1">
-        <widget class="QComboBox" name="comboBox_2">
-         <item>
-          <property name="text">
-           <string>Add</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Remove</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Function :</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_3">
-     <widget class="QTableView" name="tableView">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>140</y>
-        <width>791</width>
-        <height>431</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="textBrowser">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>60</y>
-        <width>256</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;Song&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox">
-      <property name="geometry">
-       <rect>
-        <x>510</x>
-        <y>70</y>
-        <width>91</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="maxVisibleItems">
-       <number>12</number>
-      </property>
-      <item>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Remove</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>70</y>
-        <width>211</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
+font: 16pt &quot;Rockwell&quot;;</string>
       </property>
       <property name="text">
-       <string>Name:</string>
+       <string>Enter</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="page_2">
-     <widget class="QLCDNumber" name="lcdNumber">
+     <widget class="QLineEdit" name="Inputsong">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>260</y>
-        <width>301</width>
-        <height>111</height>
+        <x>600</x>
+        <y>40</y>
+        <width>159</width>
+        <height>37</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 0);
-background-color: rgb(255, 255, 255);</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Rockwell Condensed&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="click">
+     <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>210</y>
-        <width>421</width>
-        <height>211</height>
+        <x>460</x>
+        <y>40</y>
+        <width>133</width>
+        <height>37</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Sitka Display</family>
-        <pointsize>28</pointsize>
-        <weight>50</weight>
-        <italic>true</italic>
-        <bold>false</bold>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 0);
-border-left-color: rgb(0, 170, 255);
-font: italic 28pt &quot;Sitka Display&quot;;
+       <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Click to count BPM</string>
-      </property>
-      <property name="autoRepeatDelay">
-       <number>100</number>
+       <string>Add Name:</string>
       </property>
      </widget>
-     <widget class="QCommandLinkButton" name="commandLinkButton">
+     <widget class="QLineEdit" name="Inputsong_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>241</width>
-        <height>48</height>
+        <x>141</x>
+        <y>-39</y>
+        <width>159</width>
+        <height>37</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Rockwell Condensed&quot;;</string>
+      </property>
+      <property name="text">
+       <string>fsdfasdffdsaf</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Clear">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>540</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>-39</y>
+        <width>133</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Add Name:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Back">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>540</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
       </property>
       <property name="text">
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QGroupBox" name="Source">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>90</y>
+        <width>801</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 127);
+font: 14pt &quot;Wide Latin&quot;;
+fo
+font: 81 24pt &quot;Rockwell Extra Bold&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Songs</string>
+      </property>
+      <widget class="QPlainTextEdit" name="Output">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>781</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 127);
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QPushButton" name="Clear_2">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>500</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>411</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 127);
+font: 36pt &quot;Poor Richard&quot;;</string>
+      </property>
+      <property name="text">
+       <string>        Metronome</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CountBotton">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>410</y>
+        <width>391</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(199, 0, 0);
+font: 75 16pt &quot;Rockwell&quot;;
+background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);</string>
+      </property>
+      <property name="text">
+       <string>Click To Count !</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Nome">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>70</y>
+        <width>401</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 127);
+border-color: rgb(200, 14, 42);
+border-color: rgb(212, 0, 0);
+gridline-color: rgb(255, 0, 0);
+font: 72pt &quot;Poor Richard&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Back_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>500</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>841</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>510</y>
+        <width>20</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RadioButton</string>
+      </property>
+     </widget>
+     <zorder>label_6</zorder>
+     <zorder>Clear_2</zorder>
+     <zorder>label_4</zorder>
+     <zorder>CountBotton</zorder>
+     <zorder>Nome</zorder>
+     <zorder>Back_2</zorder>
+     <zorder>radioButton</zorder>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>263</width>
+        <height>177</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Theory&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;</string>
+         </property>
+         <property name="text">
+          <string>           Theory</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Subdivision">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Poor Richard&quot;;
+color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>Sub Division</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Timesignature">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Poor Richard&quot;;
+color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>Time-Signature</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Tempo">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Poor Richard&quot;;
+color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>Tempo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Chord">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Poor Richard&quot;;
+color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="text">
+          <string>Chord progression</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="Back_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>480</y>
+        <width>201</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Poor Richard&quot;;
+color: rgb(255, 255, 127);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>30</y>
+        <width>471</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/Help/รูปfrom internet/Chord.jpg);
+background-image: url(:/Help/รูปfrom internet/divisions and subdivisions.jpg);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/Help/รูปfrom internet/Major-Key-Chord-Progressions.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="styleSheet">
+          <string notr="true">background:
+url(:/Help/รูปfrom internet/Tempo-Markings-BPM-Summary-Chart.jpg)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/Help/รูปfrom internet/TimeSig.jpg);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>-20</y>
-        <width>1011</width>
-        <height>701</height>
+        <width>921</width>
+        <height>601</height>
        </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1011</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>
@@ -275,24 +523,125 @@ background-color: rgb(255, 255, 255);</string>
        <pixmap>../../../../Desktop/รูปfrom internet/Template Metronome.jpg</pixmap>
       </property>
      </widget>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QPushButton" name="SongList">
       <property name="geometry">
        <rect>
-        <x>490</x>
-        <y>540</y>
-        <width>221</width>
-        <height>121</height>
+        <x>50</x>
+        <y>130</y>
+        <width>311</width>
+        <height>71</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;
+background-image: url(:/newPrefix/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);</string>
+      </property>
+      <property name="text">
+       <string>SongList</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Metronome">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>130</y>
+        <width>311</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;
+background-image: url(:/newPrefix/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);</string>
+      </property>
+      <property name="text">
+       <string>Metronome</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MusicTool">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>260</y>
+        <width>311</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Music-Tool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 127);
+font: 36pt &quot;Poor Richard&quot;;</string>
+      </property>
+      <property name="text">
+       <string>   Music-Tool</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Theory">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>390</y>
+        <width>311</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;
+background-image: url(:/newPrefix/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);</string>
+      </property>
+      <property name="text">
+       <string>Theory</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Exit">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>560</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 127);
+font: 16pt &quot;Rockwell&quot;;
+background-image: url(:/newPrefix/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);</string>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>80</y>
+        <width>751</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/newPrefix/รูปfrom internet/Retrospect.png);</string>
       </property>
       <property name="text">
        <string/>
       </property>
      </widget>
      <zorder>label</zorder>
-     <zorder>lcdNumber</zorder>
-     <zorder>click</zorder>
-     <zorder>commandLinkButton</zorder>
-     <zorder>radioButton</zorder>
+     <zorder>label_5</zorder>
+     <zorder>SongList</zorder>
+     <zorder>Metronome</zorder>
+     <zorder>MusicTool</zorder>
+     <zorder>Theory</zorder>
+     <zorder>Exit</zorder>
     </widget>
    </widget>
   </widget>
@@ -301,28 +650,302 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
+     <width>930</width>
      <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Myimage_project.qrc"/>
+ </resources>
  <connections>
   <connection>
-   <sender>click</sender>
+   <sender>Clear</sender>
    <signal>clicked()</signal>
-   <receiver>radioButton</receiver>
-   <slot>toggle()</slot>
+   <receiver>Output</receiver>
+   <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>210</x>
-     <y>327</y>
+     <x>851</x>
+     <y>592</y>
     </hint>
     <hint type="destinationlabel">
-     <x>513</x>
-     <y>605</y>
+     <x>724</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Exit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>836</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>876</x>
+     <y>597</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Subdivision</sender>
+   <signal>clicked()</signal>
+   <receiver>label_8</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Timesignature</sender>
+   <signal>clicked()</signal>
+   <receiver>label_13</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>790</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Tempo</sender>
+   <signal>clicked()</signal>
+   <receiver>label_11</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>218</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Chord</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>580</x>
+     <y>549</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Subdivision</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>532</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Subdivision</sender>
+   <signal>clicked()</signal>
+   <receiver>label_11</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>237</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>658</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Subdivision</sender>
+   <signal>clicked()</signal>
+   <receiver>label_13</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>791</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Timesignature</sender>
+   <signal>clicked()</signal>
+   <receiver>label_8</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>297</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Timesignature</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Timesignature</sender>
+   <signal>clicked()</signal>
+   <receiver>label_11</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>675</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Tempo</sender>
+   <signal>clicked()</signal>
+   <receiver>label_8</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Tempo</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>569</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Tempo</sender>
+   <signal>clicked()</signal>
+   <receiver>label_13</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Chord</sender>
+   <signal>clicked()</signal>
+   <receiver>label_8</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>536</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Chord</sender>
+   <signal>clicked()</signal>
+   <receiver>label_11</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>677</x>
+     <y>581</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Chord</sender>
+   <signal>clicked()</signal>
+   <receiver>label_13</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>835</x>
+     <y>530</y>
     </hint>
    </hints>
   </connection>

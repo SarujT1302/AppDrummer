@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>รูปfrom internet/Retrospect.png</file>
+    <file>รูปfrom internet/3025528.jpg</file>
+    <file>รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg</file>
+  </qresource>
+  <qresource prefix="Help">
+    <file>รูปfrom internet/divisions and subdivisions.jpg</file>
+    <file>รูปfrom internet/Chord.jpg</file>
+    <file>รูปfrom internet/TimeSig.jpg</file>
+    <file>รูปfrom internet/Major-Key-Chord-Progressions.png</file>
+    <file>รูปfrom internet/Tempo-Markings-BPM-Summary-Chart.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>รูปfrom internet/ma.1.jpg</file>
+  </qresource>
+</RCC>
