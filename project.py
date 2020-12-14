@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 import time
 
 list1=[]
@@ -284,7 +285,6 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(3)
         self.Clear.clicked.connect(self.Output.clear)
-        self.Exit.clicked.connect(MainWindow.close)
         self.Subdivision.clicked.connect(self.label_8.show)
         self.Timesignature.clicked.connect(self.label_13.show)
         self.Tempo.clicked.connect(self.label_11.show)
@@ -311,6 +311,7 @@ class Ui_MainWindow(object):
         self.CountBotton.clicked.connect(self.click)
         self.Clear_2.clicked.connect(self.clear)
         self.CountBotton.clicked.connect(self.radioButton.animateClick)
+        self.Exit.clicked.connect(self.show_popup)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -382,6 +383,23 @@ class Ui_MainWindow(object):
             result=0
             BPM=""
             self.Nome.setText(str(BPM))
+    def show_popup(self):
+            msg = QMessageBox()
+            msg.setWindowTitle("Exit")
+            msg.setText("Are you sure ?")
+            msg.setIcon(QMessageBox.Question)
+            msg.setStandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
+            msg.buttonClicked.connect(self.popup_button)
+            
+            x = msg.exec_()
+    def popup_button(self,i):
+            q=i.text()
+            print(q)
+            if q == "OK":
+                    MainWindow.close()
+            
+            
+
 
 import Myimage_project_rc
 
