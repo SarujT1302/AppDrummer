@@ -15,7 +15,6 @@ import time
 list1=[]
 a=[]
 result=0
-j={}
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -37,11 +36,37 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
+        self.Enter = QtWidgets.QPushButton(self.page)
+        self.Enter.setGeometry(QtCore.QRect(800, 40, 111, 41))
+        self.Enter.setStyleSheet("background-color: rgb(170, 0, 0);\n"
+"color: rgb(255, 255, 127);\n"
+"font: 16pt \"Rockwell\";")
+        self.Enter.setObjectName("Enter")
+        self.Inputsong = QtWidgets.QLineEdit(self.page)
+        self.Inputsong.setGeometry(QtCore.QRect(600, 40, 159, 37))
+        self.Inputsong.setStyleSheet("color: rgb(255, 255, 255);\n"
+"font: 16pt \"Rockwell Condensed\";")
+        self.Inputsong.setText("")
+        self.Inputsong.setObjectName("Inputsong")
+        self.label_2 = QtWidgets.QLabel(self.page)
+        self.label_2.setGeometry(QtCore.QRect(460, 40, 133, 37))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(255, 255, 255);")
+        self.label_2.setObjectName("label_2")
         self.Inputsong_2 = QtWidgets.QLineEdit(self.page)
         self.Inputsong_2.setGeometry(QtCore.QRect(141, -39, 159, 37))
         self.Inputsong_2.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 16pt \"Rockwell Condensed\";")
         self.Inputsong_2.setObjectName("Inputsong_2")
+        self.Clear = QtWidgets.QPushButton(self.page)
+        self.Clear.setGeometry(QtCore.QRect(770, 540, 141, 41))
+        self.Clear.setStyleSheet("background-color: rgb(170, 0, 0);\n"
+"color: rgb(255, 255, 127);\n"
+"font: 16pt \"Rockwell\";")
+        self.Clear.setObjectName("Clear")
         self.label_3 = QtWidgets.QLabel(self.page)
         self.label_3.setGeometry(QtCore.QRect(1, -39, 133, 37))
         font = QtGui.QFont()
@@ -50,149 +75,67 @@ class Ui_MainWindow(object):
         self.label_3.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 255, 255);")
         self.label_3.setObjectName("label_3")
-        self.playlistshow = QtWidgets.QLineEdit(self.page)
-        self.playlistshow.setGeometry(QtCore.QRect(150, 220, 191, 51))
-        self.playlistshow.setStyleSheet("font: 16pt \"Rockwell\";\n"
-"color:rgb(255, 255, 255)")
-        self.playlistshow.setObjectName("playlistshow")
-        self.Enterlistsong = QtWidgets.QPlainTextEdit(self.page)
-        self.Enterlistsong.setGeometry(QtCore.QRect(480, 90, 421, 161))
-        self.Enterlistsong.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Rockwell\";")
-        self.Enterlistsong.setObjectName("Enterlistsong")
-        self.label_25 = QtWidgets.QLabel(self.page)
-        self.label_25.setGeometry(QtCore.QRect(50, 210, 91, 78))
-        self.label_25.setStyleSheet("color: rgb(255, 255, 127);\n"
-"font: 20pt \"Poor Richard\";")
-        self.label_25.setObjectName("label_25")
-        self.label_26 = QtWidgets.QLabel(self.page)
-        self.label_26.setGeometry(QtCore.QRect(680, 0, 211, 81))
-        self.label_26.setStyleSheet("color: rgb(255, 255, 127);\n"
-"font: 36pt \"Poor Richard\";")
-        self.label_26.setObjectName("label_26")
-        self.Back_6 = QtWidgets.QPushButton(self.page)
-        self.Back_6.setGeometry(QtCore.QRect(770, 570, 141, 41))
-        self.Back_6.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 16pt \"Rockwell\";")
-        self.Back_6.setObjectName("Back_6")
-        self.Clear = QtWidgets.QPushButton(self.page)
-        self.Clear.setGeometry(QtCore.QRect(480, 260, 111, 41))
-        self.Clear.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 16pt \"Rockwell\";")
-        self.Clear.setObjectName("Clear")
-        self.Show = QtWidgets.QLabel(self.page)
-        self.Show.setGeometry(QtCore.QRect(50, 120, 419, 36))
-        self.Show.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 10pt \"Rockwell\";")
-        self.Show.setText("")
-        self.Show.setObjectName("Show")
-        self.Delete = QtWidgets.QPushButton(self.page)
-        self.Delete.setGeometry(QtCore.QRect(350, 250, 93, 29))
-        self.Delete.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 10pt \"Rockwell\";")
-        self.Delete.setObjectName("Delete")
-        self.label_2 = QtWidgets.QLabel(self.page)
-        self.label_2.setGeometry(QtCore.QRect(50, 310, 851, 251))
-        self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Rockwell\";")
-        self.label_2.setText("")
-        self.label_2.setObjectName("label_2")
-        self.Number = QtWidgets.QSpinBox(self.page)
-        self.Number.setGeometry(QtCore.QRect(50, 170, 206, 35))
-        self.Number.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 16pt \"Rockwell\";\n"
-"background-image: url(:/image/รูปfrom internet/dark-blue-plain-wall-background_53876-92976.jpg);\n"
-"background-color: rgb(0, 0, 127);\n"
-"background-color: rgb(0, 0, 0);")
-        self.Number.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
-        self.Number.setObjectName("Number")
-        self.Addcreate = QtWidgets.QLineEdit(self.page)
-        self.Addcreate.setGeometry(QtCore.QRect(240, 50, 108, 37))
-        self.Addcreate.setStyleSheet("font: 16pt \"Rockwell\";\n"
-"color:rgb(255, 255, 255)")
-        self.Addcreate.setText("")
-        self.Addcreate.setObjectName("Addcreate")
-        self.pushButton = QtWidgets.QPushButton(self.page)
-        self.pushButton.setGeometry(QtCore.QRect(260, 170, 206, 29))
-        self.pushButton.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 10pt \"Rockwell\";")
-        self.pushButton.setObjectName("pushButton")
         self.Back = QtWidgets.QPushButton(self.page)
-        self.Back.setGeometry(QtCore.QRect(40, 570, 141, 41))
+        self.Back.setGeometry(QtCore.QRect(70, 540, 141, 41))
         self.Back.setStyleSheet("background-color: rgb(170, 0, 0);\n"
 "color: rgb(255, 255, 127);\n"
 "font: 16pt \"Rockwell\";")
         self.Back.setObjectName("Back")
-        self.label_27 = QtWidgets.QLabel(self.page)
-        self.label_27.setGeometry(QtCore.QRect(60, 40, 165, 68))
-        self.label_27.setStyleSheet("color: rgb(255, 255, 127);\n"
-"font: 20pt \"Poor Richard\";")
-        self.label_27.setObjectName("label_27")
-        self.Enter1 = QtWidgets.QPushButton(self.page)
-        self.Enter1.setGeometry(QtCore.QRect(360, 50, 91, 31))
-        self.Enter1.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 10pt \"Rockwell\";")
-        self.Enter1.setObjectName("Enter1")
-        self.Clear_5 = QtWidgets.QPushButton(self.page)
-        self.Clear_5.setGeometry(QtCore.QRect(790, 260, 111, 41))
-        self.Clear_5.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 16pt \"Rockwell\";")
-        self.Clear_5.setObjectName("Clear_5")
-        self.Enter2 = QtWidgets.QPushButton(self.page)
-        self.Enter2.setGeometry(QtCore.QRect(350, 220, 93, 29))
-        self.Enter2.setStyleSheet("background-color: rgb(170, 0, 0);\n"
-"color: rgb(255, 255, 127);\n"
-"font: 10pt \"Rockwell\";")
-        self.Enter2.setObjectName("Enter2")
+        self.Source = QtWidgets.QGroupBox(self.page)
+        self.Source.setGeometry(QtCore.QRect(70, 90, 801, 441))
+        self.Source.setStyleSheet("color: rgb(255, 255, 127);\n"
+"font: 14pt \"Wide Latin\";\n"
+"fo\n"
+"font: 81 24pt \"Rockwell Extra Bold\";")
+        self.Source.setObjectName("Source")
+        self.Output = QtWidgets.QPlainTextEdit(self.Source)
+        self.Output.setGeometry(QtCore.QRect(10, 30, 781, 401))
+        self.Output.setStyleSheet("color: rgb(255, 255, 127);\n"
+"font: 14pt \"MS Shell Dlg 2\";")
+        self.Output.setObjectName("Output")
         self.stackedWidget.addWidget(self.page)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
         self.Clear_2 = QtWidgets.QPushButton(self.page_3)
-        self.Clear_2.setGeometry(QtCore.QRect(750, 550, 141, 41))
+        self.Clear_2.setGeometry(QtCore.QRect(740, 500, 141, 41))
         self.Clear_2.setStyleSheet("background-color: rgb(170, 0, 0);\n"
 "color: rgb(255, 255, 127);\n"
 "font: 16pt \"Rockwell\";")
         self.Clear_2.setObjectName("Clear_2")
         self.label_4 = QtWidgets.QLabel(self.page_3)
-        self.label_4.setGeometry(QtCore.QRect(50, 90, 411, 311))
+        self.label_4.setGeometry(QtCore.QRect(60, 70, 411, 311))
         self.label_4.setStyleSheet("color: rgb(255, 255, 127);\n"
 "font: 36pt \"Poor Richard\";")
         self.label_4.setObjectName("label_4")
         self.CountBotton = QtWidgets.QPushButton(self.page_3)
-        self.CountBotton.setGeometry(QtCore.QRect(270, 440, 391, 81))
+        self.CountBotton.setGeometry(QtCore.QRect(270, 410, 391, 81))
         self.CountBotton.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: rgb(199, 0, 0);\n"
 "font: 75 16pt \"Rockwell\";\n"
 "background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);")
         self.CountBotton.setObjectName("CountBotton")
         self.Nome = QtWidgets.QLabel(self.page_3)
-        self.Nome.setGeometry(QtCore.QRect(470, 90, 401, 311))
+        self.Nome.setGeometry(QtCore.QRect(480, 70, 401, 311))
         self.Nome.setStyleSheet("color: rgb(255, 255, 127);\n"
 "border-color: rgb(200, 14, 42);\n"
 "border-color: rgb(212, 0, 0);\n"
 "gridline-color: rgb(255, 0, 0);\n"
 "font: 72pt \"Poor Richard\";")
+        self.Nome.setText("")
         self.Nome.setObjectName("Nome")
         self.Back_2 = QtWidgets.QPushButton(self.page_3)
-        self.Back_2.setGeometry(QtCore.QRect(50, 550, 151, 41))
+        self.Back_2.setGeometry(QtCore.QRect(70, 500, 141, 41))
         self.Back_2.setStyleSheet("background-color: rgb(170, 0, 0);\n"
 "color: rgb(255, 255, 127);\n"
 "font: 16pt \"Rockwell\";")
         self.Back_2.setObjectName("Back_2")
         self.label_6 = QtWidgets.QLabel(self.page_3)
-        self.label_6.setGeometry(QtCore.QRect(40, 80, 841, 331))
+        self.label_6.setGeometry(QtCore.QRect(50, 60, 841, 331))
         self.label_6.setStyleSheet("background-image: url(:/newPrefix/รูปfrom internet/3025528.jpg);")
         self.label_6.setText("")
         self.label_6.setObjectName("label_6")
         self.radioButton = QtWidgets.QRadioButton(self.page_3)
-        self.radioButton.setGeometry(QtCore.QRect(460, 540, 20, 21))
+        self.radioButton.setGeometry(QtCore.QRect(470, 510, 20, 21))
         self.radioButton.setObjectName("radioButton")
         self.label_6.raise_()
         self.Clear_2.raise_()
@@ -205,7 +148,7 @@ class Ui_MainWindow(object):
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.page_4)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(80, 70, 263, 177))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(40, 80, 263, 177))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -241,7 +184,7 @@ class Ui_MainWindow(object):
         self.Chord.setObjectName("Chord")
         self.verticalLayout_4.addWidget(self.Chord)
         self.Back_5 = QtWidgets.QPushButton(self.page_4)
-        self.Back_5.setGeometry(QtCore.QRect(100, 520, 201, 71))
+        self.Back_5.setGeometry(QtCore.QRect(70, 480, 201, 71))
         self.Back_5.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font: 12pt \"Poor Richard\";\n"
 "color: rgb(255, 255, 127);")
@@ -274,11 +217,6 @@ class Ui_MainWindow(object):
         self.label_13.setText("")
         self.label_13.setObjectName("label_13")
         self.horizontalLayout_3.addWidget(self.label_13)
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.page_4)
-        self.plainTextEdit.setGeometry(QtCore.QRect(40, 280, 321, 231))
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.plainTextEdit.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Rockwell\";")
         self.stackedWidget.addWidget(self.page_4)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
@@ -342,13 +280,11 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
-        self.Enter1.clicked.connect(self.add)
-        self.Enter2.clicked.connect(self.LaLa)
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(3)
-        self.Exit.clicked.connect(self.show_popup)
+        self.Clear.clicked.connect(self.Output.clear)
         self.Subdivision.clicked.connect(self.label_8.show)
         self.Timesignature.clicked.connect(self.label_13.show)
         self.Tempo.clicked.connect(self.label_11.show)
@@ -371,44 +307,27 @@ class Ui_MainWindow(object):
         self.Back.clicked.connect(self.gopage1)
         self.Back_2.clicked.connect(self.gopage1)
         self.Back_5.clicked.connect(self.gopage1)
+        self.Enter.clicked.connect(self.Add)
         self.CountBotton.clicked.connect(self.click)
         self.Clear_2.clicked.connect(self.clear)
         self.CountBotton.clicked.connect(self.radioButton.animateClick)
-        self.Back.clicked.connect(self.gopage1)
-        self.Back_6.clicked.connect(self.label_2.clear)
-        self.pushButton.clicked.connect(self.Spinbox)
-        self.Clear_5.clicked.connect(self.Enter)
-        self.Clear.clicked.connect(self.allclear)
-        self.Delete.clicked.connect(self.delete)
-        
+        self.Exit.clicked.connect(self.show_popup)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.Enter.setText(_translate("MainWindow", "Enter"))
+        self.label_2.setText(_translate("MainWindow", "Add Name:"))
         self.Inputsong_2.setText(_translate("MainWindow", "fsdfasdffdsaf"))
-        self.label_3.setText(_translate("MainWindow", "Add Name:"))
-        self.label_25.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; color:#000000;\">Enter the playlist name that you want to see.</span></p></body></html>"))
-        self.label_25.setText(_translate("MainWindow", "Name :"))
-        self.label_26.setText(_translate("MainWindow", "  Playlist"))
-        self.Back_6.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><a href=\"https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula\"><span style=\" text-decoration: underline; color:#0000ff;\">sda</span></a></p></body></html>"))
-        self.Back_6.setText(_translate("MainWindow", "Clear"))
         self.Clear.setText(_translate("MainWindow", "Clear"))
-        self.Delete.setText(_translate("MainWindow", "Delete"))
-        self.pushButton.setText(_translate("MainWindow", "Enter"))
-        self.Back.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><a href=\"https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula\"><span style=\" text-decoration: underline; color:#0000ff;\">sda</span></a></p></body></html>"))
+        self.label_3.setText(_translate("MainWindow", "Add Name:"))
         self.Back.setText(_translate("MainWindow", "Back"))
-        self.label_27.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; color:#000000;\">Enter the playlist name to add or create.</span></p></body></html>"))
-        self.label_27.setText(_translate("MainWindow", "Add/Create:"))
-        self.Enter1.setText(_translate("MainWindow", "Enter"))
-        self.Clear_5.setText(_translate("MainWindow", "Enter"))
-        self.Enter2.setText(_translate("MainWindow", "Enter"))
+        self.Source.setTitle(_translate("MainWindow", "Songs"))
         self.Clear_2.setText(_translate("MainWindow", "Clear"))
         self.label_4.setText(_translate("MainWindow", "        Metronome"))
-        self.CountBotton.setToolTip(_translate("MainWindow", "<html><head/><body><p>Click to calculate the tempo.</p></body></html>"))
         self.CountBotton.setText(_translate("MainWindow", "Click To Count !"))
         self.Nome.setWhatsThis(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
-        self.Nome.setText(_translate("MainWindow", "      "))
         self.Back_2.setText(_translate("MainWindow", "Back"))
         self.radioButton.setText(_translate("MainWindow", "RadioButton"))
         self.label_7.setWhatsThis(_translate("MainWindow", "<html><head/><body><p align=\"center\">Theory</p></body></html>"))
@@ -418,34 +337,24 @@ class Ui_MainWindow(object):
         self.Tempo.setText(_translate("MainWindow", "Tempo"))
         self.Chord.setText(_translate("MainWindow", "Chord progression"))
         self.Back_5.setText(_translate("MainWindow", "Back"))
-        self.SongList.setText(_translate("MainWindow", "Playlist"))
+        self.SongList.setText(_translate("MainWindow", "SongList"))
         self.Metronome.setText(_translate("MainWindow", "Metronome"))
         self.MusicTool.setWhatsThis(_translate("MainWindow", "<html><head/><body><p align=\"center\">Music-Tool</p></body></html>"))
         self.MusicTool.setText(_translate("MainWindow", "   Music-Tool"))
         self.Theory.setText(_translate("MainWindow", "Theory"))
-        self.Exit.setText(_translate("MainWindow", "Exit")) 
+        self.Exit.setText(_translate("MainWindow", "Exit"))
     def gopage2(self):
-           self.stackedWidget.setCurrentIndex(0)
+            self.stackedWidget.setCurrentIndex(0)
     def gopage3(self):
-           self.stackedWidget.setCurrentIndex(1) 
+            self.stackedWidget.setCurrentIndex(1)
     def gopage4(self):
-           self.stackedWidget.setCurrentIndex(2)
+            self.stackedWidget.setCurrentIndex(2)
     def gopage1(self):
             self.stackedWidget.setCurrentIndex(3)
-    def show_popup(self):
-            msg = QMessageBox()
-            msg.setWindowTitle("Exit")
-            msg.setText("Are you sure ?")
-            msg.setIcon(QMessageBox.Question)
-            msg.setStandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
-            msg.buttonClicked.connect(self.popup_button)
-            
-            x = msg.exec_()
-    def popup_button(self,i):
-            q=i.text()
-            print(q)
-            if q == "OK":
-                    MainWindow.close()
+    def Add(self):
+            lists=self.Inputsong.text()
+            self.Output.appendPlainText(lists)
+            self.Inputsong.setText("")
     def click(self):
             result=0
             if len(list1)<2:
@@ -473,71 +382,25 @@ class Ui_MainWindow(object):
             a.clear()
             result=0
             BPM=""
-            self.Nome.setText(str(BPM)) 
-    def add(self):
-        b=self.Addcreate.text()
-        if b in j:
-                self.Show.setText("The number of new song you would like to update : ")
-                
-        else:
-                self.Show.setText("The number of song you would like to add in playlist : ")
-        print(j)
-        print(b)
-    def Spinbox(self):
-            c=self.Number.value()
-            self.Enterlistsong.setPlainText("Song Name : \n"*c)
-    def allclear(self):
-            self.Addcreate.clear()
-            self.Show.clear()
-            self.Number.clear()
-            self.Enterlistsong.clear()
-    def Enter(self):
-            e = []
-            data=self.Enterlistsong.toPlainText()
-            if data=="":
-                    self.Enterlistsong.setPlainText("Sorry, please done in process...")
-            else:        
-                data.replace("Song Name :","")
-                data=data.split("\n")
-                '''
-                if data in j[self.Addcreate]:
-                        pass
-                else:
-                        j[Addcreate].append(data)
-                        return j
-                '''
-                for word in data :
-                        v=word.split(":")
-                        sad=v.pop(-1)
-                        e.append(sad.strip())
-                e.pop(-1)
-                j[self.Addcreate.text()]=e
+            self.Nome.setText(str(BPM))
+    def show_popup(self):
+            msg = QMessageBox()
+            msg.setWindowTitle("Exit")
+            msg.setText("Are you sure ?")
+            msg.setIcon(QMessageBox.Question)
+            msg.setStandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
+            msg.buttonClicked.connect(self.popup_button)
+            
+            x = msg.exec_()
+    def popup_button(self,i):
+            q=i.text()
+            print(q)
+            if q == "OK":
+                    MainWindow.close()
+              
+            
 
-                self.Addcreate.clear()
-                self.Show.clear()
-                self.Number.clear()
-                self.Enterlistsong.clear()
-                self.Enterlistsong.setPlainText("Adding sucessful!!!")
-                print(data)
-                print(j)
-                print(e)
 
-                return j
-    def LaLa(self):
-             pry=self.playlistshow.text()
-             if pry in j :
-                     j[pry]=str(j[pry])
-                     self.label_2.setText(j[pry])
-             else:
-                     self.label_2.setText("Please create the playlist!!!")
-    def delete(self):
-             if self.playlistshow.text()=="":
-                     self.label_s.setText("Clame down dude,input song first!")
-             else: 
-                pry=self.playlistshow.text()
-                del j[pry]
-                self.playlistshow.setText("")
-                self.label.setText("")     
 import Myimage_project_rc
 
 if __name__ == "__main__":
